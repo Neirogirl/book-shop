@@ -1,0 +1,65 @@
+[
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 589,
+    "description": "Описание отсутствует",
+    "coverUrl": "https://covers.openlibrary.org/b/id/15257452-L.jpg"
+  },
+  {
+    "title": "Crime and Punishment (Penguin Classics)",
+    "author": "Fiódor Dostoievski",
+    "price": 373,
+    "description": "Описание отсутствует",
+    "coverUrl": "https://covers.openlibrary.org/b/id/111733-L.jpg"
+  },
+  {
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J. K. Rowling",
+    "price": 609,
+    "description": "Описание отсутствует",
+    "coverUrl": "https://covers.openlibrary.org/b/id/15155835-L.jpg"
+  },
+  {
+    "title": "Three comrades",
+    "author": "Erich Maria Remarque",
+    "price": 530,
+    "description": "\"A Fawcett Columbine book.\"\nThis translation was originally published by Little, Brown in 1937.",
+    "coverUrl": "https://covers.openlibrary.org/b/id/291246-L.jpg"
+  },
+  {
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "price": 583,
+    "description": "Описание отсутствует",
+    "coverUrl": "https://covers.openlibrary.org/b/id/12018409-L.jpg"
+  },
+  {
+    "title": "Anna Karenina",
+    "author": "Leo Tolstoy",
+    "price": 637,
+    "description": "Описание отсутствует",
+    "coverUrl": "https://covers.openlibrary.org/b/id/111128-L.jpg"
+  },
+  {
+    "title": "Atomic Habits",
+    "author": "Неизвестен",
+    "price": 542,
+    "description": "Описание отсутствует",
+    "coverUrl": ""
+  },
+  {
+    "title": "Thinking, fast and slow",
+    "author": "Daniel Kahneman",
+    "price": 609,
+    "description": "Описание отсутствует",
+    "coverUrl": "https://covers.openlibrary.org/b/id/7889800-L.jpg"
+  },
+  {
+    "title": "Sapiens A brief Story of Human Kind",
+    "author": "Yuval Noah Harari",
+    "price": 650,
+    "description": "Описание отсутствует",
+    "coverUrl": "https://covers.openlibrary.org/b/id/14369194-L.jpg"
+  }
+]

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 import '../widgets/app_scaffold.dart';
 import '../state/app_state.dart';
+import '../services/book_service.dart';
+import '../services/seed_data.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -150,6 +152,53 @@ class ProfileScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(23),
                     ),
                   ),
+                                // Временная кнопка — залить книги в Firestore
+              SizedBox(
+                width: double.infinity,
+                height: 46,
+                child: ElevatedButton(
+                  onPressed: () async {
+                    final confirmed = await showDialog<bool>(
+                      context: context,
+                      builder: (_) => AlertDialog(
+                        title: const Text('Загрузить книги?'),
+                        content: const Text(
+                            'Будет добавлено 12 книг в базу Firestore.'),
+                        actions: [
+                          TextButton(
+                            onPressed: () => Navigator.pop(context, false),
+                            child: const Text('Отмена'),
+                          ),
+                          TextButton(
+                            onPressed: () => Navigator.pop(context, true),
+                            child: const Text('Загрузить'),
+                          ),
+                        ],
+                      ),
+                    );
+                    if (confirmed != true) return;
+                    for (final book in SeedData.books) {
+                      await BookService.instance.addBook(book);
+                    }
+                    if (!context.mounted) return;
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('12 книг добавлено в базу!'),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppTheme.accent,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(23),
+                    ),
+                    elevation: 0,
+                  ),
+                  child: const Text('Загрузить книги (тест)'),
+                ),
+              ),
+              const SizedBox(height: 12),
                   child: const Text('Выйти из аккаунта'),
                 ),
               ),
